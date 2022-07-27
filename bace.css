@@ -1,1 +1,34 @@
+body{
+	margin: 0;
+}
 
+.tab{
+  -moz-appearance: none;
+  -webkit-appearance: none:
+  appearance: none;
+
+  height: 9vh;
+  width: 20vw;
+
+  margin: 0 10px 0 10px;/*スマホなら「０」にする*/
+  /*padding: 20 5 20 5;*/
+  border: 0;
+  cursor: pointer;
+  background-color: black;
+  /*font-size: 3か5vh;これは多分おそらくタブレット用　　こっちにすると、横１行に収まるが下のコードじゃないと、ボタンの縦の長さと合わない。*/
+	font-size: 3vw;
+	color: white;
+vertical-align:top;
+}
+
+.tabmenu{
+	padding: 0 15px 0 15px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+	display: flex;
+}
+.displaynone{
+	display: none;
+}
