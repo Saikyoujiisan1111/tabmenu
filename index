@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="shortcut icon" href="" sizes="32x32">
+    <link rel="shortcut icon" href="" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="" >
+    <link rel="stylesheet" href="bace.css">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <script type="text/javascript">
+    var dorekeep;
+      window.onload = function Onload(){
+        dorekeep = 2;
+        whichTab(2)
+      }
+      function whichTab(dore){
+        document.getElementById("content"+dorekeep).classList.add("displaynone");
+        window.document.getElementById("tabAnimation").style.position = "absolute";
+        document.getElementById("tabAnimation").animate( {
+          marginLeft : [ document.getElementById("tabAnimation").getBoundingClientRect().x+"px", document.getElementById(dore).getBoundingClientRect().x+"px"],
+        } , {
+          fill: "forwards",
+          duration: 200,
+          iterations: 1
+        });
+        document.getElementById("content"+dore).classList.remove("displaynone");
+        dorekeep = dore;
+      }
+    </script>
+
+  </head>
+  <body>
+
+    <div class="tabmenu">
+      <button type="button" onclick="whichTab(1)" id="1" class="tab">イベント</button>
+      <button type="button" onclick="whichTab(2)" id="2" class="tab">問題集</button>
+    </div>
+    
+    <button id="tabAnimation" class="tab" style="background-color: white; mix-blend-mode: difference;"></button>
+
+    <div class="" style="width: 100vw; height: 9vh; background-color: white;"></div>
+
+<div class="" style="width: 100vw; height: 30px; background-color: #dc143c;"></div>
+    <section class="displaynone" id="content1">
+      <p>あ</p>
+    </section>
+    <section class="displaynone" id="content2">
+      <p>い</p>
+    </section>
+
+  </body>
+
+</html>
